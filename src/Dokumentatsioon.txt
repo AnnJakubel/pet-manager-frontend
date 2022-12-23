@@ -17,4 +17,10 @@ Autor: Annabel Jakubel
             "allowSyntheticDefaultImports": true,
             "jsx": "react",
     5. Jätkan HTML põhja ehitamist.
+        Error: NgForm ei tööta
+        Lahendus: NgForm import oli .ts failist puudu
+    6. Pet mudeli loomine.
+    7. AppComponent-is onAddPet() funktsiooni sisustamine, et võtaks sisestatud andmed vastu.
+
+    TODO: Tõsta kodulooma lisamine eraldi komponendi sisse, teha sellele service. 
 
