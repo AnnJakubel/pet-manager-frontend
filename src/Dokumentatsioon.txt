@@ -1,0 +1,9 @@
+DOKUMENTATSIOON
+Autor: Annabel Jakubel
+
+23.12.2022
+    Alustasin front-end projekti loomist pärast Spring boot projekti töölesaamist.
+    Teisel projektil puudu vaid user+password funktsionaalsus hetkel.
+
+    1.Pärast CMD-s projekti tegemist läbi Angular CLI, installin bootstrapi ja panen vajalikud väljad paika.
+    (angular.json faili)
