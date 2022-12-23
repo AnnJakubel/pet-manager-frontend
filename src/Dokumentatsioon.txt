@@ -5,5 +5,16 @@ Autor: Annabel Jakubel
     Alustasin front-end projekti loomist pärast Spring boot projekti töölesaamist.
     Teisel projektil puudu vaid user+password funktsionaalsus hetkel.
 
-    1.Pärast CMD-s projekti tegemist läbi Angular CLI, installin bootstrapi ja panen vajalikud väljad paika.
+    1. Pärast CMD-s projekti tegemist läbi Angular CLI, installin bootstrapi ja panen vajalikud väljad paika.
     (angular.json faili)
+    2. Teen app.component.html valmis Forms põhja, hiljem muudan ning lisan
+    bootstrap-i klasse juurde stiliseerimiseks.
+    3. Import app.module.ts faili ReactiveFormsModule
+    4. Import FormControl ja FormGroup
+        Error: import React from 'react'
+        Vahemõtted: Import ei toimi millegipärast
+        Lahendus: Lisasin tsconfig.json faili järgneva koodi:
+            "allowSyntheticDefaultImports": true,
+            "jsx": "react",
+    5. Jätkan HTML põhja ehitamist.
+
