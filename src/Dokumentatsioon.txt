@@ -1,7 +1,7 @@
 DOKUMENTATSIOON
 Autor: Annabel Jakubel
 
-23.12.2022
+23.12.2022 (Aeg: 1h 39min)
     Alustasin front-end projekti loomist pärast Spring boot projekti töölesaamist.
     Teisel projektil puudu vaid user+password funktsionaalsus hetkel.
 
