@@ -23,4 +23,28 @@ Autor: Annabel Jakubel
     7. AppComponent-is onAddPet() funktsiooni sisustamine, et võtaks sisestatud andmed vastu.
 
     TODO: Tõsta kodulooma lisamine eraldi komponendi sisse, teha sellele service. 
+____
 
+24.12.2022 (Aeg: 1h 10min)
+    1. Tõstan kodulooma lisamise ja muutmise eraldi komponentidesse.
+    2. Osade input väljade muutmine select listideks.
+    3. Pet-manager.service.ts loomine, et tekitaks listi ja väljastaks seda.
+____
+
+25.12.2022 (Aeg: 1h)
+    1. Teen esialgu pet-manager.service.ts faili ja html faili loomade listi kuvamise
+    niimoodi, nagu senini oskan (eventEmitter). Hiljem muudan ümber mida vaja.
+
+    Probleem: PetManager komponent ei kuva AppComponent html-i sees.
+    Lahendus: Tundub, et lihtsalt lehe laadimises mingi viga, vaatasin kõik üle ja lõpuks
+    oli leht laadinud.
+
+    Probleem: Looma lisamisel (hetkel puhtalt front-endis) ei lisa seda nimekirja.
+    Vahemõtted: ... Tulen selle juurde tagasi ...
+
+    2. Looma muutmise (pet-edit) komponentide tegemine, esialgu sellisele põhjale mida senini oskan.
+    3. Edit nupu paigldamine, enam-vähem visuaalse paigutuse paika saamine igale lisatud loomale.
+
+    TODO: Paika saada lisamise nimekirja
+          Aeg hakata vaatama, kuidas ühendada spring boot front+end osaga
+          Pet-edit komponendi seadistamine

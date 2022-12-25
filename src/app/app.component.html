@@ -1,16 +1,7 @@
-<h1>{{ title }}</h1>
-<form (ngSubmit)="onAddPet(f)" #f="ngForm">
-  <div class="form-group">
-    <label for="exampleUsernameInput">Pet type (species)</label>
-    <input type="text" class="form-control" id="pet-type" name="type" placeholder="enter pet type" ngModel>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-pet-manager></app-pet-manager>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="exampleUsernameInput">Fur color</label>
-    <input type="text" class="form-control" id="fur-color" name="color" placeholder="enter fur color" ngModel>
-  </div>
-  <div class="form-group">
-    <label for="exampleUsernameInput">Country of origin</label>
-    <input type="text" class="form-control" id="country-of-origin" name="country" placeholder="enter country of origin" ngModel>
-  </div>
-    <button class="btn btn-primary" >Submit</button>
-</form>
+</div>
