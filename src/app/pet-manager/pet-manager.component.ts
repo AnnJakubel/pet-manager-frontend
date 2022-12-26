@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Pet } from '../shared/Pet.model';
 import { PetManagerService } from './pet-manager.service';
@@ -10,6 +10,7 @@ import { PetManagerService } from './pet-manager.service';
 })
 export class PetManagerComponent implements OnInit {
   pets: Pet[] = [];
+  @Output() featureSelected = new EventEmitter<string>();
 
   constructor(private petManagerService: PetManagerService) {}
 
@@ -20,13 +21,10 @@ export class PetManagerComponent implements OnInit {
         this.pets = pets
       }
     )
-    
   }
 
-  onAddPet(form: NgForm) {
-    const value = form.value;
-    const newPet = new Pet(value.name, value.type, value.color, value.country);
-
+  onSelect(feature: string) {
+    this.featureSelected.emit(feature);
   }
 
 }

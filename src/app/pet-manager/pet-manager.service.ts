@@ -6,8 +6,8 @@ export class PetManagerService {
     petsChanged = new EventEmitter<Pet[]>();
     
     private pets: Pet[] = [
-        new Pet('Pootsman', 'Cat', 'Black', 'Estonia'),
-        new Pet('Mitsi', 'Cat', 'Brown', 'Latvia')
+        new Pet('Pootsman', 123, 'Cat', 'Black', 'Estonia'),
+        new Pet('Mitsi', 124, 'Cat', 'Brown', 'Latvia')
     ];
 
     getPets() {

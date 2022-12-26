@@ -44,7 +44,17 @@ ____
 
     2. Looma muutmise (pet-edit) komponentide tegemine, esialgu sellisele põhjale mida senini oskan.
     3. Edit nupu paigldamine, enam-vähem visuaalse paigutuse paika saamine igale lisatud loomale.
+___
 
-    TODO: Paika saada lisamise nimekirja
-          Aeg hakata vaatama, kuidas ühendada spring boot front+end osaga
-          Pet-edit komponendi seadistamine
+26.12.2022 (Aeg: 2h 29min)
+    1. Loomade andmete ümber kujundamine tabeliks
+    2. Osa koodi ümber tõstmine eraldi komponenti (pet-add), et kõik samal lehel poleks.
+    3. Andmete sortimise võimaluse tekitamine (sort.ts, html tabeli muutmine)
+        Error: TS1248: A class member cannot have the 'const' keyword.
+        Lahendus: Sulud olid sort.directive.ts klassis puudu vajalikest kohtadest.
+    4. Tabeli kujundus läbi bootstrapi
+    5. Nuppude linkimine vajalikele lehtedele ("Add Pet", "Edit Pet")
+    6. Eelnevaga seoses Route-ide määratlemine ja seadistamine.
+
+    TODO: Looma lisamise ja Formsi tööle saamine.
+

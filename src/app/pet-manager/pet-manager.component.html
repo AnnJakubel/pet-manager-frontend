@@ -1,63 +1,31 @@
 <div class="container">
     <div class="row">
     <div class="col-xs-12">
-        <h2 class="text-md-center">Add a new pet</h2>
-        <br>
-        <form (ngSubmit)="onAddPet(f)" #f="ngForm">
-            <div class="col-sm-10 form-group">
-              <label>Name</label>
-              <input type="text" class="form-control" id="pet-name" name="name" placeholder="enter pet name" ngModel required>
-            </div>
-            <br>
-            <div class="col-sm-10 form-group">
-              <label>Type</label>
-              <select name="type" class="form-control form-select" ngModel required>
-                <option value="">Choose...</option>
-                <option value="Dog">Dog</option>
-                <option value="Cat">Cat</option>
-                <option value="Horse">Horse</option>
-                <option value="Rabbit">Rabbit</option>
-                <option value="Parrot">Parrot</option>
-              </select>
-            </div>
-            <br>
-            <div class="col-sm-10 form-group">
-              <label>Fur color</label>
-              <select name="color" class="form-control form-select" ngModel required>
-                <option value="">Choose...</option>
-                <option value="Black">Black</option>
-                <option value="White">White</option>
-                <option value="Brown">Brown</option>
-                <option value="Yellow">Yellow</option>
-                <option value="Blue">Blue</option>
-              </select>
-            </div>
-            <br>
-            <div class="col-sm-10 form-group">
-              <label>Country of origin</label>
-              <select name="color" class="form-control form-select" ngModel required>
-                <option value="">Choose...</option>
-                <option value="Estonia">Estonia</option>
-                <option value="Latvia">Latvia</option>
-                <option value="Lithuania">Lithuania</option>
-                <option value="Finland">Finland</option>
-                <option value="Sweden">Sweden</option>
-                <option value="Norway">Norway</option>
-              </select>
-            </div>
-            <br>
-            <button class="btn btn-primary col-sm-10" type="submit" [disabled]="!f.valid">Add pet</button>
-          </form>
-          <hr>
-          <ul class="list-group">
-            <a class="list-group-item" style="cursor:pointer" *ngFor="let pet of pets">
-              <div class="d-flex flex-wrap justify-content-between align-self-start">
-                {{ pet.name }} {{ pet.type }} {{ pet.color }} {{ pet.country }}
-                <button class="btn btn-primary align-self-end">Edit Pet</button>
-              </div>
-              <!-- Lisa siia Edit Pet nupp -->
-            </a>
-          </ul>
+      <h1 class="text-center">Pets</h1>
+      <a role="button" class="btn btn-primary" [routerLink]="['/add-pet']">Add Pet</a>
+          <table class="table mt-2">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col" role="button" [appSort]="pets" data-order="desc" data-name="name" >Name ▼</th>
+                <th scope="col" role="button" [appSort]="pets" data-order="desc" data-name="code">Code ▼</th>
+                <th scope="col" role="button" [appSort]="pets" data-order="desc" data-name="type">Type ▼</th>
+                <th scope="col" role="button" [appSort]="pets" data-order="desc" data-name="color">Color ▼</th>
+                <th scope="col" role="button" [appSort]="pets" data-order="desc" data-name="country">Country of origin ▼</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let pet of pets">
+                <td></td>
+                <td>{{ pet.name }}</td>
+                <td>{{ pet.code }}</td>
+                <td>{{ pet.type }}</td>
+                <td>{{ pet.color }}</td>
+                <td>{{ pet.country }}</td>
+                <span><a class="btn btn-primary" role="button" [routerLink]="['/edit-pet']">Edit Pet</a></span>
+              </tr>
+            </tbody>
+          </table>
     </div>
 </div>
 </div>

@@ -9,6 +9,7 @@ import { PetManagerService } from '../pet-manager.service';
 })
 export class PetEditComponent implements OnInit {
   @ViewChild('nameInput', {static: true}) nameInput: ElementRef;
+  @ViewChild('codeInput', {static: true}) codeInput: ElementRef;
   @ViewChild('typeInput', {static: true}) typeInput: ElementRef;
   @ViewChild('colorInput', {static: true}) colorInput: ElementRef;
   @ViewChild('countryInput', {static: true}) countryInput: ElementRef;
@@ -19,9 +20,10 @@ export class PetEditComponent implements OnInit {
 
   onAddPet() {
     const petName = this.nameInput.nativeElement.value;
+    const petCode = this.codeInput.nativeElement.value;
     const petType = this.typeInput.nativeElement.value;
     const petColor = this.colorInput.nativeElement.value;
     const petCountry = this.countryInput.nativeElement.value;
-    const newPet = new Pet(petName, petType, petColor, petCountry);
+    const newPet = new Pet(petName, petCode, petType, petColor, petCountry);
   }
 }

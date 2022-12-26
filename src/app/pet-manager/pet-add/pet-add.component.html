@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2 class="text-md-center">Add a new pet</h2>
+      <a role="presentation" class="btn btn-primary" [routerLink]="['/']">Back</a>
+      <br>
+      <form (ngSubmit)="onAddPet(f)" #f="ngForm">
+        <div class="col-sm-10 form-group">
+          <label>Name</label>
+          <input type="text" class="form-control" id="pet-name" name="name" placeholder="enter pet name" ngModel required>
+        </div>
+        <br>
+        <div class="col-sm-10 form-group">
+          <label>Type</label>
+          <select name="type" class="form-control form-select" ngModel required>
+            <option value="">Choose...</option>
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+            <option value="Horse">Horse</option>
+            <option value="Rabbit">Rabbit</option>
+            <option value="Parrot">Parrot</option>
+          </select>
+        </div>
+        <br>
+        <div class="col-sm-10 form-group">
+          <label>Fur color</label>
+          <select name="color" class="form-control form-select" ngModel required>
+            <option value="">Choose...</option>
+            <option value="Black">Black</option>
+            <option value="White">White</option>
+            <option value="Brown">Brown</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Blue">Blue</option>
+          </select>
+        </div>
+        <br>
+        <div class="col-sm-10 form-group">
+          <label>Country of origin</label>
+          <select name="color" class="form-control form-select" ngModel required>
+            <option value="">Choose...</option>
+            <option value="Estonia">Estonia</option>
+            <option value="Latvia">Latvia</option>
+            <option value="Lithuania">Lithuania</option>
+            <option value="Finland">Finland</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Norway">Norway</option>
+          </select>
+        </div>
+        <br>
+        <button class="btn btn-primary col-sm-10" type="submit" [disabled]="!f.valid">Add pet</button>
+      </form>
+    </div>
+  </div>
+</div>
