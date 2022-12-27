@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 
 
@@ -9,10 +10,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pet-manager-frontend';
-  loadedFeature = 'home';
-
-  onNavigate(featureToNavigateTo) {
-    this.loadedFeature = featureToNavigateTo;
+  constructor(private titleService: Title) {
+    this.titleService.setTitle("Pet Manager")
   }
-
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Pet } from 'src/app/shared/Pet.model';
 import { PetManagerService } from '../pet-manager.service';
@@ -10,6 +10,16 @@ import { PetManagerService } from '../pet-manager.service';
 })
 export class PetAddComponent {
   pets: Pet[] = [];
+  @ViewChild('f') petForm: NgForm;
+  addedPet = {
+    name: '',
+    code: 0,
+    type: '',
+    color: '',
+    country: '',
+  }
+  submitted = false;
+
 
   constructor(private petManagerService: PetManagerService) {}
 
@@ -23,10 +33,16 @@ export class PetAddComponent {
     
   }
 
-  onAddPet(form: NgForm) {
-    const value = form.value;
-    const newPet = new Pet(value.name, value.code, value.type, value.color, value.country);
+onAddPet() {
+  this.submitted = true;
+  this.addedPet.name = this.petForm.value.name;
+  this.addedPet.code = this.petForm.value.code;
+  this.addedPet.type = this.petForm.value.type;
+  this.addedPet.color = this.petForm.value.color;
+  this.addedPet.country = this.petForm.value.country;
+  this.petManagerService.addPet(this.addedPet);
 
-  }
+  this.petForm.reset();
+ }
 
 }

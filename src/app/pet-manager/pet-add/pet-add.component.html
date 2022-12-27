@@ -4,10 +4,16 @@
       <h2 class="text-md-center">Add a new pet</h2>
       <a role="presentation" class="btn btn-primary" [routerLink]="['/']">Back</a>
       <br>
-      <form (ngSubmit)="onAddPet(f)" #f="ngForm">
+      <br>
+      <form (ngSubmit)="onAddPet()" #f="ngForm">
         <div class="col-sm-10 form-group">
           <label>Name</label>
-          <input type="text" class="form-control" id="pet-name" name="name" placeholder="enter pet name" ngModel required>
+          <input type="text" class="form-control" name="name" placeholder="enter pet name" ngModel required>
+        </div>
+        <br>
+        <div class="col-sm-10 form-group">
+          <label>Code</label>
+          <input type="text" class="form-control" name="code" placeholder="enter pet code" ngModel required>
         </div>
         <br>
         <div class="col-sm-10 form-group">
@@ -36,7 +42,7 @@
         <br>
         <div class="col-sm-10 form-group">
           <label>Country of origin</label>
-          <select name="color" class="form-control form-select" ngModel required>
+          <select name="country" class="form-control form-select" ngModel required>
             <option value="">Choose...</option>
             <option value="Estonia">Estonia</option>
             <option value="Latvia">Latvia</option>
@@ -49,6 +55,18 @@
         <br>
         <button class="btn btn-primary col-sm-10" type="submit" [disabled]="!f.valid">Add pet</button>
       </form>
+      <br>
+      <br>
+    </div>
+  </div>
+  <div class="row" *ngIf="submitted">
+    <div class="col-xs-12">
+      <h3>Added pet</h3>
+      <p>Name: {{ addedPet.name }}</p>
+      <p>Code: {{ addedPet.code }}</p>
+      <p>Animal type: {{ addedPet.type }}</p>
+      <p>Fur color: {{ addedPet.color }}</p>
+      <p>Country of origin: {{ addedPet.country }} </p>
     </div>
   </div>
 </div>

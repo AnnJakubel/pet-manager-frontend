@@ -58,3 +58,11 @@ ___
 
     TODO: Looma lisamise ja Formsi tööle saamine.
 
+27.12.2022
+    Osa tänasest ajast kulub Forms-ide kohta õppimiseks.
+    1. Form-i valmis tegemine, et saaks lisada kodulooma.
+        -Form-i resettimine pärast andmete esitamise nupuvajutust.
+    2. Form-ist tulnud andmete lisamine Pets tabelisse.
+    3. Http requestide tegemine.
+
+
