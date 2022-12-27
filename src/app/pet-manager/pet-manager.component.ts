@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Pet } from '../shared/Pet.model';
@@ -9,22 +10,22 @@ import { PetManagerService } from './pet-manager.service';
   styleUrls: ['./pet-manager.component.css']
 })
 export class PetManagerComponent implements OnInit {
-  pets: Pet[] = [];
-  @Output() featureSelected = new EventEmitter<string>();
+  pets: any = [];
 
-  constructor(private petManagerService: PetManagerService) {}
+
+  constructor(private petManagerService: PetManagerService, private http: HttpClient) {}
 
   ngOnInit() {
-    this.pets = this.petManagerService.getPets();
-    this.petManagerService.petsChanged.subscribe(
-      (pets: Pet[]) => {
-        this.pets = pets
-      }
-    )
-  }
+    this.http.get('http://localhost:8080/pets')
+    .subscribe((data) => {
+      this.pets = data;
+    })
 
-  onSelect(feature: string) {
-    this.featureSelected.emit(feature);
+    // this.pets = this.petManagerService.getPets();
+    // this.petManagerService.petsChanged.subscribe(
+    //   (pets: Pet[]) => {
+    //     this.pets = pets
+    //   }
+    // )
   }
-
 }

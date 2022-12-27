@@ -5,10 +5,7 @@ import { Pet } from "../shared/Pet.model";
 export class PetManagerService {
     petsChanged = new EventEmitter<Pet[]>();
     
-    private pets: Pet[] = [
-        new Pet('Pootsman', 123, 'Cat', 'Black', 'Estonia'),
-        new Pet('Mitsi', 124, 'Cat', 'Brown', 'Latvia')
-    ];
+    private pets: Pet[] = [];
 
     getPets() {
         return this.pets.slice();

@@ -1,6 +1,14 @@
 DOKUMENTATSIOON
 Autor: Annabel Jakubel
 
+Front-endi käitamine:
+    Projekti käitamiseks tuleb terminali kirjutada käsu: ng serve
+    Projekti front-end asub aadressil http://localhost:4200
+    (Projekti back-end andmebaas asub aadressil http://localhost:8080/pets)
+____
+
+FRONT-END
+
 23.12.2022 (Aeg: 1h 39min)
     Alustasin front-end projekti loomist pärast Spring boot projekti töölesaamist.
     Teisel projektil puudu vaid user+password funktsionaalsus hetkel.
@@ -58,11 +66,17 @@ ___
 
     TODO: Looma lisamise ja Formsi tööle saamine.
 
-27.12.2022
+27.12.2022 (Aeg: 3h 20min)
     Osa tänasest ajast kulub Forms-ide kohta õppimiseks.
     1. Form-i valmis tegemine, et saaks lisada kodulooma.
         -Form-i resettimine pärast andmete esitamise nupuvajutust.
     2. Form-ist tulnud andmete lisamine Pets tabelisse.
-    3. Http requestide tegemine.
+    3. HTTP POST requesti võimekuse loomine.
+        Probleem: Code väljal ei kandu andmebaasi, kui pole number, aga front-endis näitab ära
+        Lahendus: Input type muuta numbriks, css faili läbi peita nooleotsad tulbal.
+        Testimine: Toimib
+    4. Tabeli sidumine HTTP GET requestiga PetManagerComponent-i all.
+        -Testimine: Ei kao lehe refreshimisel ära, toimib!
+
 
 

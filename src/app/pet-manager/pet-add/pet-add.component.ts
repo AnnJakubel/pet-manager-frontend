@@ -1,7 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Pet } from 'src/app/shared/Pet.model';
 import { PetManagerService } from '../pet-manager.service';
+
 
 @Component({
   selector: 'app-pet-add',
@@ -21,7 +23,9 @@ export class PetAddComponent {
   submitted = false;
 
 
-  constructor(private petManagerService: PetManagerService) {}
+  constructor(private petManagerService: PetManagerService, private http: HttpClient) {
+
+  }
 
   ngOnInit() {
     this.pets = this.petManagerService.getPets();
@@ -33,16 +37,20 @@ export class PetAddComponent {
     
   }
 
-onAddPet() {
-  this.submitted = true;
-  this.addedPet.name = this.petForm.value.name;
-  this.addedPet.code = this.petForm.value.code;
-  this.addedPet.type = this.petForm.value.type;
-  this.addedPet.color = this.petForm.value.color;
-  this.addedPet.country = this.petForm.value.country;
-  this.petManagerService.addPet(this.addedPet);
+  onAddPet() {
+    this.submitted = true;
+    this.addedPet.name = this.petForm.value.name;
+    this.addedPet.code = this.petForm.value.code;
+    this.addedPet.type = this.petForm.value.type;
+    this.addedPet.color = this.petForm.value.color;
+    this.addedPet.country = this.petForm.value.country;
+    this.petManagerService.addPet(this.addedPet);
 
-  this.petForm.reset();
- }
+    this.http.post('http://localhost:8080/pets', this.addedPet)
+    .subscribe((response) => {
+      console.warn("response", response)
+    })
 
+    this.petForm.reset();
+  }
 }
