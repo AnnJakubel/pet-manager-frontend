@@ -8,22 +8,22 @@
                     <input 
                     type="text" 
                     id="name" 
-                    class="form-control"
-                    #nameInput>
+                    name="name"
+                    class="form-control">
                 </div>
                 <div class="col-sm-5 form-group">
                     <label for="code">Code</label>
                     <input 
                     type="number" 
-                    id="code" 
+                    id="code"
+                    name="code" 
                     class="form-control"
-                    #codeInput
                     readonly>
                 </div>
                 <div class="col-sm-5 form-group">
                     <label for="type">Type</label>
-                    <select name="type" class="form-control form-select" #typeInput ngModel required>
-                        <option value="">Choose...</option>
+                    <select name="type" class="form-control form-select" ngModel required>
+                        <option value="" disabled selected>Choose...</option>
                         <option value="Dog">Dog</option>
                         <option value="Cat">Cat</option>
                         <option value="Horse">Horse</option>
@@ -33,8 +33,8 @@
                 </div>
                 <div class="col-sm-5 form-group">
                     <label for="color">Color</label>
-                    <select name="color" class="form-control form-select" #colorInput ngModel required>
-                        <option value="">Choose...</option>
+                    <select name="color" class="form-control form-select" ngModel required>
+                        <option value="" disabled selected>Choose...</option>
                         <option value="Black">Black</option>
                         <option value="White">White</option>
                         <option value="Brown">Brown</option>
@@ -44,8 +44,8 @@
                 </div>
                 <div class="col-sm-5 form-group">
                     <label for="country">Country</label>
-                    <select name="country" class="form-control form-select" #countryInput ngModel required>
-                        <option value="">Choose...</option>
+                    <select name="country" class="form-control form-select" ngModel required>
+                        <option value="" disabled selected>Choose...</option>
                         <option value="Estonia">Estonia</option>
                         <option value="Latvia">Latvia</option>
                         <option value="Lithuania">Lithuania</option>

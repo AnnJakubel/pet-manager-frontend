@@ -80,12 +80,19 @@ ___
         -Testimine: Ei kao lehe refreshimisel ära, toimib!
 ___
 
-28.12.2022
+28.12.2022 
     Vahemõtted: Ridade sortimisel tuleb teha millegi pärast topeltklikk esialgu,
     et vastava tulba järgi sorteeriks andmeid. Pärast seda sama tulba nime vajutades piisab ühest klikist.
 
     1.Muutmise jaoks Service jm ühendused.
     2.Edit komponendi õmber tõstmine pealehele
     TODO: Populate data fields.
+
+    Probleem: Edit Pet komponendis ei täida automaatselt andmetega ära, kuigi panin placeholderi.
+    Vaatan pidevalt koodi üle komponentide vahel, et näha mis lüli puudu on hetkel, kuid ei leia. 
+    Olen senini püüdnud jälgida Template-drive forms tüüpi, kuid proovin homme reactive forms, ehk saan tööle.
+    Kahtlustan, et onAddPet() funktsiooni kustutamisega ja püüdlusega seda ühendada onUpdatePet() funktsiooniga
+    tegin mingi vale sammu. 
+
 
 

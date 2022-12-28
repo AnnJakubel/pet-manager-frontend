@@ -1,7 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { Pet } from '../shared/Pet.model';
+import { Component, OnInit } from '@angular/core';
 import { PetManagerService } from './pet-manager.service';
 
 @Component({
