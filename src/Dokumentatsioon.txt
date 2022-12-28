@@ -80,7 +80,7 @@ ___
         -Testimine: Ei kao lehe refreshimisel ära, toimib!
 ___
 
-28.12.2022 
+28.12.2022 (Aeg 2h 7min)
     Vahemõtted: Ridade sortimisel tuleb teha millegi pärast topeltklikk esialgu,
     et vastava tulba järgi sorteeriks andmeid. Pärast seda sama tulba nime vajutades piisab ühest klikist.
 
