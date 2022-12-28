@@ -85,7 +85,7 @@ ___
     et vastava tulba järgi sorteeriks andmeid. Pärast seda sama tulba nime vajutades piisab ühest klikist.
 
     1.Muutmise jaoks Service jm ühendused.
-    2.Edit komponendi õmber tõstmine pealehele
+    2.Edit komponendi ümber tõstmine pealehele
     TODO: Populate data fields.
 
     Probleem: Edit Pet komponendis ei täida automaatselt andmetega ära, kuigi panin placeholderi.
