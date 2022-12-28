@@ -12,7 +12,7 @@ import { PetManagerService } from '../pet-manager.service';
 })
 export class PetAddComponent {
   pets: Pet[] = [];
-  @ViewChild('f') petForm: NgForm;
+  @ViewChild('f', { static: false }) petForm: NgForm;
   addedPet = {
     name: '',
     code: 0,

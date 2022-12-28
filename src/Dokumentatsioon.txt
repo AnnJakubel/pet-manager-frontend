@@ -5,7 +5,7 @@ Front-endi käitamine:
     Projekti käitamiseks tuleb terminali kirjutada käsu: ng serve
     Projekti front-end asub aadressil http://localhost:4200
     (Projekti back-end andmebaas asub aadressil http://localhost:8080/pets)
-____
+___
 
 FRONT-END
 
@@ -31,13 +31,13 @@ FRONT-END
     7. AppComponent-is onAddPet() funktsiooni sisustamine, et võtaks sisestatud andmed vastu.
 
     TODO: Tõsta kodulooma lisamine eraldi komponendi sisse, teha sellele service. 
-____
+___
 
 24.12.2022 (Aeg: 1h 10min)
     1. Tõstan kodulooma lisamise ja muutmise eraldi komponentidesse.
     2. Osade input väljade muutmine select listideks.
     3. Pet-manager.service.ts loomine, et tekitaks listi ja väljastaks seda.
-____
+___
 
 25.12.2022 (Aeg: 1h)
     1. Teen esialgu pet-manager.service.ts faili ja html faili loomade listi kuvamise
@@ -65,6 +65,7 @@ ___
     6. Eelnevaga seoses Route-ide määratlemine ja seadistamine.
 
     TODO: Looma lisamise ja Formsi tööle saamine.
+___
 
 27.12.2022 (Aeg: 3h 20min)
     Osa tänasest ajast kulub Forms-ide kohta õppimiseks.
@@ -77,6 +78,10 @@ ___
         Testimine: Toimib
     4. Tabeli sidumine HTTP GET requestiga PetManagerComponent-i all.
         -Testimine: Ei kao lehe refreshimisel ära, toimib!
+___
 
+28.12.2022
+    Vahemõtted: Ridade sortimisel tuleb teha millegi pärast topeltklikk esialgu,
+    et vastava tulba järgi sorteeriks andmeid. Pärast seda sama tulba nime vajutades piisab ühest klikist.
 
 

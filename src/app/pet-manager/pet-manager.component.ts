@@ -11,6 +11,7 @@ import { PetManagerService } from './pet-manager.service';
 })
 export class PetManagerComponent implements OnInit {
   pets: any = [];
+  clicked = false;
 
 
   constructor(private petManagerService: PetManagerService, private http: HttpClient) {}
@@ -19,13 +20,10 @@ export class PetManagerComponent implements OnInit {
     this.http.get('http://localhost:8080/pets')
     .subscribe((data) => {
       this.pets = data;
-    })
+    });
+  }
 
-    // this.pets = this.petManagerService.getPets();
-    // this.petManagerService.petsChanged.subscribe(
-    //   (pets: Pet[]) => {
-    //     this.pets = pets
-    //   }
-    // )
+  onEditPet(index: number) {
+    this.petManagerService.startedEditing.next(index);
   }
 }

@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-xs-12">
-        <a role="button" class="btn btn-primary" [routerLink]="['/']">Back</a>
-        <form>
+        <h2 class="text-md-center">Edit pet</h2>
+        <form (ngSubmit)="onUpdatePet(editForm)" #editForm="ngForm">
             <div class="row">
                 <div class="col-sm-5 form-group">
                     <label for="name">Name</label>
@@ -10,38 +10,55 @@
                     id="name" 
                     class="form-control"
                     #nameInput>
-                    <!-- # is a local reference -->
                 </div>
                 <div class="col-sm-5 form-group">
-                    <label for="amount">Amount</label>
+                    <label for="code">Code</label>
                     <input 
-                    type="text" 
-                    id="type" 
+                    type="number" 
+                    id="code" 
                     class="form-control"
-                    #typeInput>
+                    #codeInput
+                    readonly>
                 </div>
                 <div class="col-sm-5 form-group">
-                    <label for="amount">Amount</label>
-                    <input 
-                    type="text" 
-                    id="color" 
-                    class="form-control"
-                    #colorInput>
+                    <label for="type">Type</label>
+                    <select name="type" class="form-control form-select" #typeInput ngModel required>
+                        <option value="">Choose...</option>
+                        <option value="Dog">Dog</option>
+                        <option value="Cat">Cat</option>
+                        <option value="Horse">Horse</option>
+                        <option value="Rabbit">Rabbit</option>
+                        <option value="Parrot">Parrot</option>
+                    </select>
                 </div>
                 <div class="col-sm-5 form-group">
-                    <label for="amount">Amount</label>
-                    <input 
-                    type="text" 
-                    id="color" 
-                    class="form-control"
-                    #colorInput>
+                    <label for="color">Color</label>
+                    <select name="color" class="form-control form-select" #colorInput ngModel required>
+                        <option value="">Choose...</option>
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Brown">Brown</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="Blue">Blue</option>
+                    </select>
+                </div>
+                <div class="col-sm-5 form-group">
+                    <label for="country">Country</label>
+                    <select name="country" class="form-control form-select" #countryInput ngModel required>
+                        <option value="">Choose...</option>
+                        <option value="Estonia">Estonia</option>
+                        <option value="Latvia">Latvia</option>
+                        <option value="Lithuania">Lithuania</option>
+                        <option value="Finland">Finland</option>
+                        <option value="Sweden">Sweden</option>
+                        <option value="Norway">Norway</option>
+                    </select>
                 </div>
             </div>
+            <br>
             <div class="row">
                 <div class="col-xs-12">
-                    <button class="btn btn-success" type="submit" (click)="onAddPet()">Add</button>
-                    <button class="btn btn-danger" type="button">Delete</button>
-                    <button class="btn btn-primary" type="button">Clear</button>
+                    <button class="btn btn-primary" type="submit" [disabled]="!editForm.valid">Edit Pet</button>
                 </div>
             </div>
         </form>
