@@ -84,4 +84,8 @@ ___
     Vahemõtted: Ridade sortimisel tuleb teha millegi pärast topeltklikk esialgu,
     et vastava tulba järgi sorteeriks andmeid. Pärast seda sama tulba nime vajutades piisab ühest klikist.
 
+    1.Muutmise jaoks Service jm ühendused.
+    2.Edit komponendi õmber tõstmine pealehele
+    TODO: Populate data fields.
+
 

@@ -15,9 +15,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let pet of pets; 
-              let i = index" 
-              (click)="onEditPet(i)">
+              <tr *ngFor="let pet of pets; let i = index" (click)="onEditPet(i)">
                 <td></td>
                 <td>{{ pet.name }}</td>
                 <td>{{ pet.code }}</td>
