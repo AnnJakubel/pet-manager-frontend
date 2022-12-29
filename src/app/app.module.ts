@@ -11,12 +11,16 @@ import { PetEditComponent } from './pet-manager/pet-edit/pet-edit.component'
 import { PetManagerService } from './pet-manager/pet-manager.service';
 import { PetAddComponent } from './pet-manager/pet-add/pet-add.component';
 import { SortDirective } from './shared/sort.directive';
+import { LoginComponent } from './login/login.component';
+
+
 
 
 const appRoutes: Routes =[
   { path: '', component: PetManagerComponent },
+  { path: 'login', component: LoginComponent },
+  { path: '**', redirectTo: '' },
   { path: 'add-pet', component: PetAddComponent },
-  { path: 'edit-pet', component: PetEditComponent }
 ];
 
 @NgModule({
@@ -25,7 +29,8 @@ const appRoutes: Routes =[
     PetManagerComponent,
     PetEditComponent,
     PetAddComponent,
-    SortDirective
+    SortDirective,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,9 @@ Front-endi käitamine:
     Projekti käitamiseks tuleb terminali kirjutada käsu: ng serve
     Projekti front-end asub aadressil http://localhost:4200
     (Projekti back-end andmebaas asub aadressil http://localhost:8080/pets)
+
+    Kasutaja: user
+    Parool: password
 ___
 
 FRONT-END
@@ -94,5 +97,36 @@ ___
     Kahtlustan, et onAddPet() funktsiooni kustutamisega ja püüdlusega seda ühendada onUpdatePet() funktsiooniga
     tegin mingi vale sammu. 
 
+29.12.2022 (Aeg: 2h 40min)
+    1. Hakkasin tegema HTTP Basic authentication-it. 
+    Jälgisin Baeldung-i tutoriali, mis hõlmab ka Spring Security poolt.
+
+    Error: Failed to initialize Angular compilation - The target entry-point "@angular/http" has missing dependencies:
+        - @angular/core
+        - rxjs
+        - @angular/platform-browser
+    Error: in ./src/app/app.module.ts
+    Module build failed (from ./node_modules/@ngtools/webpack/src/ivy/index.js):
+    Error: Emit attempted before Angular Webpack plugin initialization.
+
+    Lahendus: @angular/http npm installimine
+
+    Probleem: Programm laeb ära, kuid näitab vaid "Loading..." kirja.
+___
+
+
+Järelkommentaarid: 
+
+Edukas osa: Sain tööle lemmikloomade lisamise, lisatud loomade kuvamise tabelis läbi Formside ja
+HTTP POST ja GET requestide, tulpade sortimise klikiga.
+Ei saanud Edit Pet komponendi lõpuks tööle, ning püüdlusega HTTP Basic authentication teha, on paraku
+front-end ligipääsmatu, kuna mul ei õnnestu Login leht tööle saada. 
+Sellegipoolest back-end osa on töökorras ja testitud läbi postmani.
+
+Tunnistan, et Angular on selle projekti puhul mu nõrgim külg. Kuigi püüdsin sügisel võimalikult
+palju seda iseseisvalt omandada, jäid mulle veel lüngad sisse, 
+mis põhjustasid mul front-endi poolseid tõrkeid. Seega oli raskem ka haarata errorite puhul
+lahendusi võrreldes Spring Bootiga, kus ma juba mõistsin paremini kuidas mis toimib.
+Kindlasti jätkan pärast selle projekti esitamist Angulari põhjalikku õppimist. 
 
 
