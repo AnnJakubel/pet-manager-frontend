@@ -19,7 +19,6 @@ import { LoginComponent } from './login/login.component';
 const appRoutes: Routes =[
   { path: '', component: PetManagerComponent },
   { path: 'login', component: LoginComponent },
-  { path: '**', redirectTo: '' },
   { path: 'add-pet', component: PetAddComponent },
 ];
 

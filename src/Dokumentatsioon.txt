@@ -129,4 +129,11 @@ mis põhjustasid mul front-endi poolseid tõrkeid. Seega oli raskem ka haarata e
 lahendusi võrreldes Spring Bootiga, kus ma juba mõistsin paremini kuidas mis toimib.
 Kindlasti jätkan pärast selle projekti esitamist Angulari põhjalikku õppimist. 
 
+____
+
+11.01.2023
+
+Veaparandus, HTTP requestide suunamine läbi proxy:
+    1. proxy.config.json faili loomine ja target määratlemine
+    2. angular.json faili proxy lisamine (serve variandi alla)
 
