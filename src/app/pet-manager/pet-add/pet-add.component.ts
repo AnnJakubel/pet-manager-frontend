@@ -46,7 +46,7 @@ export class PetAddComponent {
     this.addedPet.country = this.petForm.value.country;
     this.petManagerService.addPet(this.addedPet);
 
-    this.http.post('http://localhost:8080/pets', this.addedPet)
+    this.http.post<[]>('/pets', this.addedPet)
     .subscribe((response) => {
       console.warn("response", response)
     })

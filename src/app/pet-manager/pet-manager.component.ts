@@ -15,7 +15,7 @@ export class PetManagerComponent implements OnInit {
   constructor(private petManagerService: PetManagerService, private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get('http://localhost:8080/pets')
+    this.http.get<[]>('/pets')
     .subscribe((data) => {
       this.pets = data;
     });

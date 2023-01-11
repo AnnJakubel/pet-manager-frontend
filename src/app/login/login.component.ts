@@ -11,15 +11,14 @@ import { Observable } from 'rxjs';
 export class LoginComponent implements OnInit {
   model: any = {};
 
-  constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient) { }
+  constructor(private router: Router, private http: HttpClient) { }
 
   ngOnInit() { 
     sessionStorage.setItem('token', '');
   }
 
   login() {
-    let url = 'http://localhost:8080/login';
-    this.http.post<Observable<boolean>>(url, {
+    this.http.post<Observable<boolean>>('/login', {
       userName: this.model.username,
       password: this.model.password
     }).subscribe(isValid => {

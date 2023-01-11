@@ -15,8 +15,4 @@ export class DataStorageService {
             console.log(response)
         })
     }
-
-    private fetchPets() {
-        this.http.get('http://localhost:8080/pets')
-    }
 }

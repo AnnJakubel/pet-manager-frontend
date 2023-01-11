@@ -19,7 +19,7 @@ import { LoginComponent } from './login/login.component';
 const appRoutes: Routes =[
   { path: '', component: PetManagerComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'add-pet', component: PetAddComponent },
+  { path: 'add-pet', component: PetAddComponent }
 ];
 
 @NgModule({

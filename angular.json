@@ -62,7 +62,7 @@
           "configurations": {
             "production": {
               "browserTarget": "pet-manager-frontend:build:production",
-              "proxyConfig": "src/proxy.conf.json"
+              "proxyConfig": "src/proxy.conf.js"
             },
             "development": {
               "browserTarget": "pet-manager-frontend:build:development"

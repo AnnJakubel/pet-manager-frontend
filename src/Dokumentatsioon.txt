@@ -136,4 +136,14 @@ ____
 Veaparandus, HTTP requestide suunamine läbi proxy:
     1. proxy.config.json faili loomine ja target määratlemine
     2. angular.json faili proxy lisamine (serve variandi alla)
+    3. index.html failis base href ära muutmine, 
+        et proxy failis oleks element toimiv
+    4. proxy.config muutmine .js failiks, et context kasti teha
+        mitu endpointi UI poolt HTTP requesti jaoks
+    5. "auth" välja lisamine proxy.config faili
+    6. HTTP requestide vormi ümber tegemine vastavates .ts failides
+        selle põhjal, mis tundus, et on õige. Kõige suurem ebakindlus login puhul.
+
+PS. Püüdsin veel korra front-endi poolelt login tööle saada, et reaalselt järgi ise katsetada,
+    kas UI ja API vaheline suhtlus toimib. Paraku see ebaõnnestus.
 
